@@ -13,6 +13,7 @@ Group:    System/Configuration/Other
 Url:      http://www.mandrivalinux.com/en/cvs.php3
 BuildRequires: perl-MDK-Common-devel
 Requires: drakxtools => %drakxtools_required_version
+Requires: common-licenses
 BuildRoot: %_tmppath/%name-%version-buildroot
 # for program:
 Conflicts: drakxtools <= %drakxtools_conflicted_version
@@ -46,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc COPYING ChangeLog
+%doc ChangeLog
 %_sbindir/*
 /usr/lib/libDrakX/icons/*
 /usr/share/libDrakX/pixmaps/*
