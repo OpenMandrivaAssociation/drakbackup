@@ -6,7 +6,7 @@
 Summary:  Backup and restore the system
 Name:     drakbackup
 Version:  0.9
-Release:  %mkrel 2
+Release:  %mkrel 3
 Source0:  %name-%version.tar.bz2
 License:  GPL
 Group:    System/Configuration/Other
@@ -14,6 +14,7 @@ Url:      http://www.mandrivalinux.com/en/cvs.php3
 BuildRequires: perl-MDK-Common-devel
 Requires: drakxtools => %drakxtools_required_version
 Requires: common-licenses
+Requires: usermode-consoleonly >= 1.92-4mdv2008.0
 BuildRoot: %_tmppath/%name-%version-buildroot
 # for program:
 Conflicts: drakxtools <= %drakxtools_conflicted_version
@@ -47,17 +48,8 @@ FALLBACK=false
 SESSION=true
 EOF
 mkdir -p %{buildroot}%{_sysconfdir}/pam.d
-cat > %{buildroot}%{_sysconfdir}/pam.d/drakbackup <<EOF
-#%PAM-1.0
-auth       sufficient   pam_rootok.so
-auth       required     pam_console.so
-auth       sufficient   pam_timestamp.so
-auth       include      system-auth
-account    required     pam_permit.so
-session    required     pam_permit.so
-session    optional     pam_xauth.so
-session    optional     pam_timestamp.so
-EOF
+ln -sf %{_sysconfdir}/pam.d/mandriva-simple-auth %{buildroot}%{_sysconfdir}/pam.d/drakbackup
+# make menu entry call the consolehelper link
 sed -i -e "s,%{_sbindir}/drakbackup,%{_bindir}/drakbackup," \
         %{buildroot}%{_datadir}/applications/drakbackup.desktop
 
