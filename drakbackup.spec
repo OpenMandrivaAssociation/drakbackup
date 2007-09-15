@@ -5,8 +5,8 @@
 
 Summary:  Backup and restore the system
 Name:     drakbackup
-Version:  0.9
-Release:  %mkrel 3
+Version:  0.10
+Release:  %mkrel 1
 Source0:  %name-%version.tar.bz2
 License:  GPL
 Group:    System/Configuration/Other
