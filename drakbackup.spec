@@ -23,7 +23,7 @@ Conflicts: drakxtools-curses <= %drakxtools_conflicted_version
 BuildArch: noarch
 
 %description
-Drakbackup enables to  backup and restore the system.
+Drakbackup enables to backup and restore the system.
 
 %prep
 %setup -q
