@@ -15,7 +15,6 @@ BuildRequires: perl-MDK-Common-devel
 Requires: drakxtools => %drakxtools_required_version
 Requires: common-licenses
 Requires: usermode-consoleonly >= 1.92-4mdv2008.0
-BuildRoot: %_tmppath/%name-%version-buildroot
 # for program:
 Conflicts: drakxtools <= %drakxtools_conflicted_version
 # for man pages:
