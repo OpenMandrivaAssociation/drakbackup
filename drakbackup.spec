@@ -6,10 +6,10 @@
 Summary:  Backup and restore the system
 Name:     drakbackup
 Version:  0.14
-Release:  %mkrel 2
+Release:  %mkrel 3
 Source0:  %name-%version.tar.bz2
 License:  GPL
-Group:    System/Configuration/Other
+Group:    Archiving/Other
 Url:      http://www.mandrivalinux.com/en/cvs.php3
 BuildRequires: perl-MDK-Common-devel
 Requires: drakxtools => %drakxtools_required_version
