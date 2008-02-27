@@ -7,7 +7,7 @@ Summary:  Backup and restore the system
 Name:     drakbackup
 Version:  0.15
 Release:  %mkrel 1
-Source0:  %name-%version.tar.bz2
+Source0:  %name-%version.tar.lzma
 License:  GPL
 Group:    Archiving/Other
 Url:      http://www.mandrivalinux.com/en/cvs.php3
