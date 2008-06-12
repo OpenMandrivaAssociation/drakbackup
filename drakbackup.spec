@@ -53,11 +53,15 @@ ln -sf %{_sysconfdir}/pam.d/mandriva-simple-auth %{buildroot}%{_sysconfdir}/pam.
 sed -i -e "s,%{_sbindir}/drakbackup,%{_bindir}/drakbackup," \
         %{buildroot}%{_datadir}/applications/drakbackup.desktop
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
