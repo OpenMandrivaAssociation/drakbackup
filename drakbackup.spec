@@ -10,7 +10,7 @@ Release:  %mkrel 2
 Source0:  %name-%version.tar.lzma
 License:  GPL
 Group:    Archiving/Other
-Url:      http://www.mandrivalinux.com/en/cvs.php3
+Url:      https://www.mandrivalinux.com/en/cvs.php3
 BuildRequires: perl-MDK-Common-devel
 Requires: drakxtools => %drakxtools_required_version
 Requires: common-licenses
